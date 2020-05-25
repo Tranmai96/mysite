@@ -1,0 +1,28 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+<div class="row">
+    {% for i in words %}
+    <br>
+
+    <div class="col-md-4">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{i.word}}</h5>
+            <p class="card-text">{{i.definition}}</p>
+            <a href="#" class="btn btn-primary">Detail</a>
+        </div>
+    
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    {% endfor %}
+  </div>
+
+
+
+
+{% endblock %}
