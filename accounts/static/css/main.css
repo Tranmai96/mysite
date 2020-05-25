@@ -1,0 +1,18 @@
+
+body{
+    background-color: #ebeff5;
+}
+
+
+#total-words{
+    background-color: #4cb4c7;
+}
+
+
+#passed{
+    background-color: #7abecc;
+}
+
+#pending{
+    background-color: #7CD1C0;
+}
