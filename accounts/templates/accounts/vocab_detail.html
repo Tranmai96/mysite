@@ -1,0 +1,50 @@
+{%  extends 'accounts/main.html' %}
+
+{% block content %}
+
+
+
+<br>
+
+
+<div class="Post">
+    <h2>{{ word.word }}</h2> 
+    <h4>Description:</h4>       
+    <p>{{ word.definition|linebreaksbr }}</p>
+    <h4>Note:</h4>       
+    <p>{{ word.example|linebreaksbr }}</p>
+</div>
+	
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Task:</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>
+			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Delete Customer</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Person in Charge</h5>
+			<hr>
+			<p>Email: {{pic.email}}</p>
+			<p>Phone: {{pic.phone}}</p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Status</h5>
+			<hr>
+			<h1 style="text-align: center;padding: 10px">{{status}}</h1>
+		</div>
+	</div>
+</div>
+
+	
+{% endblock %}

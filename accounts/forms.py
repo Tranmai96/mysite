@@ -2,7 +2,7 @@ from django import forms
 
 from django.forms import ModelForm
 
-from .models import Lesson
+from .models import Lesson, Student
 
 class LessonForm(forms.ModelForm):
     class Meta:
@@ -13,3 +13,7 @@ class LessonForm(forms.ModelForm):
         # fields= ['student']
 
 
+class StudentForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = '__all__'

@@ -11,7 +11,7 @@
 		<h5>STUDENTS:</h5>
 		<hr>
 		<div class="card card-body">
-			<a class="btn btn-primary  btn-sm btn-block" href="">Add Student</a>
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'add_student' %}">Add Student</a>
 			<table class="table table-sm">
 				<tr>
 					<th></th>
@@ -38,6 +38,7 @@
 				<tr>
 					<th>Words</th>
 					<th>Date Added</th>
+					<th>担当者</th>
 					<th>Status</th>
 					<th>Update</th>
 					<th>Remove</th>
@@ -45,10 +46,11 @@
                 {% for i in lessons %}
                 <tr>
                     <td>{{i.word}}</td>
-                    <td>{{i.date_created}}</td>
+					<td>{{i.date_created}}</td>
+					<td>{{i.student}}</td>
                     <td>{{i.status}}</td>
-                    <td><a href="">Update</a></td>
-					<td><a href="">Delete</a></td>
+                    <td><a href="{% url 'update_lesson' i.id %}">Update</a></td>
+					<td><a href="{% url 'delete_lesson' i.id %}">Delete</a></td>
 
                 </tr>
                 {% endfor %}

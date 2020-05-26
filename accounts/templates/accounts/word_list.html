@@ -10,7 +10,7 @@
         <div class="card-body">
             <h5 class="card-title">{{i.word}}</h5>
             <p class="card-text">{{i.definition}}</p>
-            <a href="#" class="btn btn-primary">Detail</a>
+            <a class="btn btn-primary" href="{% url 'vocab_detail' i.id %}">Detail</a>
         </div>
     
         </div>
